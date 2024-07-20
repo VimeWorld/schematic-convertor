@@ -1289,8 +1289,6 @@ var blocksNamespace = {
     'minecraft:dark_oak_stairs[facing=west,half=top,shape=straight,waterlogged=false]': 2629,
     'minecraft:dark_oak_stairs[facing=south,half=top,shape=straight,waterlogged=false]': 2630,
     'minecraft:dark_oak_stairs[facing=north,half=top,shape=straight,waterlogged=false]': 2631,
-    'minecraft:slime_block': 16128,
-    'minecraft:barrier': 12176,
     'minecraft:iron_trapdoor[facing=north,half=bottom,open=false,powered=false,waterlogged=false]': 14864,
     'minecraft:iron_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]': 14865,
     'minecraft:iron_trapdoor[facing=west,half=bottom,open=false,powered=false,waterlogged=false]': 14866,
@@ -1898,6 +1896,8 @@ var blocksNamespace = {
     'minecraft:prismarine_bricks': createBlockId(168, 1),
     'minecraft:dark_prismarine': createBlockId(168, 2),
     'minecraft:sea_lantern': 169 << 4,
+    'minecraft:slime_block': 165 << 4,
+    'minecraft:barrier': 166 << 4,
 
     'minecraft:copper_block': createBlockId(253, 0),
     'minecraft:exposed_copper': createBlockId(253, 1),
