@@ -2180,6 +2180,7 @@ var blocksNamespace = {
     // skulls start
     'minecraft:skeleton_skull[rotation=0]': createBlockId(397, 0),
     'minecraft:skeleton_skull[rotation=0,powered=false]': createBlockId(397, 0),
+    'minecraft:skeleton_skull[powered=false, rotation=0]': createBlockId(397, 0),
     'minecraft:wither_skeleton_skull[powered=false,rotation=0]': createBlockId(397, 1),
     // skulls end
 
