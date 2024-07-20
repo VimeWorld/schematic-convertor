@@ -1944,6 +1944,8 @@ var blocksNamespace = {
 
     'minecraft:mushroom_stem[down=false,east=true,north=true,south=true,up=false,west=true]': createBlockId(99, 15),
     'minecraft:mushroom_stem[down=true,east=true,north=true,south=true,up=true,west=true]': createBlockId(99, 15),
+    'minecraft:mushroom_stem[down=false,east=none,north=none,south=none,up=false,west=none]': createBlockId(99, 15),
+    'minecraft:mushroom_stem[down=true,east=none,north=none,south=none,up=false,west=none]': createBlockId(99, 15),
 
     'minecraft:red_sandstone': createBlockId(179, 0),
     'minecraft:purpur_block': 201 << 4,
