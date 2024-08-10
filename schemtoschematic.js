@@ -2349,6 +2349,47 @@ var blocksNamespace = {
     // VimeWorld End - new blocks
 };
 
+function getVimeWorldBlocksList() {
+    const list = new Map()
+    for (const block in blocksNamespace) {
+        const id = blocksNamespace[block]
+        const filteredName = block.split('[')[0]
+
+        if (!list.get(filteredName)) {
+            list.set(filteredName, id)
+        }
+    }
+
+    downloadJsonMapAsObject(list)
+}
+
+function downloadJsonMapAsObject(map, filename = 'mapData.json') {
+    // Преобразуем Map в объект
+    const obj = Object.fromEntries(map);
+
+    // Преобразуем объект в строку JSON
+    const jsonString = JSON.stringify(obj, null, 2);
+
+    // Создаем новый Blob объект
+    const blob = new Blob([jsonString], { type: 'application/json' });
+
+    // Создаем URL для Blob объекта
+    const url = URL.createObjectURL(blob);
+
+    // Создаем временный элемент <a>
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+
+    // Добавляем элемент на страницу и имитируем клик
+    document.body.appendChild(a);
+    a.click();
+
+    // Удаляем элемент <a> и освобождаем URL
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
 function schemtoschematic(arrayBuffer, callback) {
     // Move the schematic offset data to the old location
     function moveOffset(root) {
