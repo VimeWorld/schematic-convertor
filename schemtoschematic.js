@@ -1691,7 +1691,6 @@ var blocksNamespace = {
     'minecraft:chain[axis=y]': 16432,
     'minecraft:chain[axis=z]': 13234,
     'minecraft:ancient_debris': 12896,
-    'minecraft:magma_block': 13232,
     'minecraft:honeycomb_block': 16256,
     'minecraft:honey_block': 16416,
     'minecraft:netherite_block': 15984,
@@ -1954,7 +1953,7 @@ var blocksNamespace = {
     'minecraft:purpur_pillar[axis=z]': createBlockId(202, 8),
     'minecraft:end_bricks': 206 << 4,
     'minecraft:nether_bricks': 206 << 4,
-    'minecraft:magma': 213 << 4,
+    'minecraft:magma_block': 213 << 4,
     'minecraft:nether_wart_block': 214 << 4,
     'minecraft:red_nether_brick': 215 << 4,
     'minecraft:red_nether_bricks': 215 << 4,
@@ -1983,8 +1982,6 @@ var blocksNamespace = {
     'minecraft:rooted_dirt': createBlockId(3, 1),
     'minecraft:crimson_nylium': 198 << 4,
     'minecraft:warped_nylium': 199 << 4,
-    'minecraft:crimson_stairs': 207 << 4,
-    'minecraft:warped_stairs': 208 << 4,
 
     // fence gate start
     'minecraft:oak_fence_gate[facing=south,in_wall=false,open=false,powered=false]': createBlockId(107, 0),
@@ -2119,6 +2116,14 @@ var blocksNamespace = {
     'minecraft:crimson_stairs[facing=west,half=top,shape=straight,waterlogged=false]': createBlockId(207, 5),
     'minecraft:crimson_stairs[facing=south,half=top,shape=straight,waterlogged=false]': createBlockId(207, 6),
     'minecraft:crimson_stairs[facing=north,half=top,shape=straight,waterlogged=false]': createBlockId(207, 7),
+    'minecraft:warped_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]': createBlockId(208, 0),
+    'minecraft:warped_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]': createBlockId(208, 1),
+    'minecraft:warped_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]': createBlockId(208, 2),
+    'minecraft:warped_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]': createBlockId(208, 3),
+    'minecraft:warped_stairs[facing=east,half=top,shape=straight,waterlogged=false]': createBlockId(208, 4),
+    'minecraft:warped_stairs[facing=west,half=top,shape=straight,waterlogged=false]': createBlockId(208, 5),
+    'minecraft:warped_stairs[facing=south,half=top,shape=straight,waterlogged=false]': createBlockId(208, 6),
+    'minecraft:warped_stairs[facing=north,half=top,shape=straight,waterlogged=false]': createBlockId(208, 7),
     // stairs end
 
     // wood start
