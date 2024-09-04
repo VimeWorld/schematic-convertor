@@ -277,6 +277,10 @@
 		 * @param {Array.<number>|Uint8Array|Buffer} value
 		 * @returns {module:nbt.Writer} itself */
 		this[nbt.tagTypes.byteArray] = function(value) {
+			if(!value) {
+				console.error('Прилетел null при записи byteArray')
+				return this;
+			}
 			this.int(value.length);
 			accommodate(value.length);
 			arrayView.set(value, this.offset);
