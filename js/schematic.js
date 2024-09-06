@@ -15,7 +15,7 @@ function parseSchemFile(arrayBuffer, callback) {
                 convertBlockDataV2(root);
                 break;
             case 3:
-                moveGlobalDataV3(root);
+                setGlobalDataV3(root);
                 moveOffsetV3(root);
                 moveOriginV3(root);
                 moveTileEntitiesV3(root);
@@ -40,6 +40,7 @@ function parseSchemFile(arrayBuffer, callback) {
     });
 }
 
+// Парсит версию схематики
 function parseVersion(nbtData) {
     let version;
     if (nbtData.value?.Version) {
@@ -244,7 +245,7 @@ function convertToLegacyBlockId(namespaceKey) {
         }
     }
 
-    var error = 'Unknown namespace key: ' + originalKey + ', replacing with air. ' + namespaceKey;
+    var error = 'Неизвестный блок: ' + originalKey + ', заменено на воздух.';
 
     if (document && document.querySelector) {
         var errorNode = document.querySelector('#error');

@@ -1,4 +1,5 @@
-function moveGlobalDataV3(root) {
+// Устанавливает глобальные данные для схематики
+function setGlobalDataV3(root) {
     const data = getSchematicObjectV3(root)
     root.name = 'Schematic'
     root.value.Width = data.Width;
