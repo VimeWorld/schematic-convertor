@@ -26,7 +26,7 @@
 	/** @exports nbt */
 
 	var nbt = this;
-	var zlib = typeof require !== 'undefined' ? require('zlib') : window.zlib;
+	var zlib = typeof require !== 'undefined' ? require('js/plugins/zlib') : window.zlib;
 
 	/**
 	 * A mapping from type names to NBT type numbers.
@@ -334,10 +334,12 @@
 		 * @param {Array} value.value - an array of values
 		 * @returns {module:nbt.Writer} itself */
 		this[nbt.tagTypes.list] = function(value) {
+			console.log(value)
 			this.byte(nbt.tagTypes[value.type]);
 			this.int(value.value.length);
 			var i;
 			for (i = 0; i < value.value.length; i++) {
+				console.log(value)
 				this[value.type](value.value[i]);
 			}
 			return this;
@@ -361,6 +363,7 @@
 			Object.keys(value).map(function (key) {
 				self.byte(nbt.tagTypes[value[key].type]);
 				self.string(key);
+				console.log(value[key])
 				self[value[key].type](value[key].value);
 			});
 			this.byte(nbt.tagTypes.end);
