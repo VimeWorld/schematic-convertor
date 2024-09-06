@@ -1878,7 +1878,8 @@ var blocksNamespace = {
     'minecraft:skeleton_wall_skull[facing=west]': 2316,
     'minecraft:skeleton_wall_skull[facing=east]': 2317,
     // VimeWorld start - new blocks
-
+    'minecraft:brown_mushroom': createBlockId(39, 0),
+    'minecraft:red_mushroom': createBlockId(40, 0),
     'minecraft:prismarine': createBlockId(168, 0),
     'minecraft:prismarine_bricks': createBlockId(168, 1),
     'minecraft:dark_prismarine': createBlockId(168, 2),
