@@ -2347,15 +2347,18 @@ function createBlockId(convertedID, metaID) {
     return (convertedID << 4) | (metaID & 0xF)
 }
 
-function downloadJsonMapAsObject(map, filename = 'mapData.json') {
+function downloadYamlMapAsObject(map, filename = 'blocks.yaml') {
     // Преобразуем Map в объект
     const obj = Object.fromEntries(map);
 
-    // Преобразуем объект в строку JSON
-    const jsonString = JSON.stringify(obj, null, 2);
+    // Оборачиваем объект в ключ 'blocks'
+    const wrappedObj = {blocks: obj};
+
+    // Преобразуем объект в YAML строку
+    const yamlString = jsyaml.dump(wrappedObj);
 
     // Создаем новый Blob объект
-    const blob = new Blob([jsonString], { type: 'application/json' });
+    const blob = new Blob([yamlString], {type: 'application/x-yaml'});
 
     // Создаем URL для Blob объекта
     const url = URL.createObjectURL(blob);
@@ -2374,11 +2377,12 @@ function downloadJsonMapAsObject(map, filename = 'mapData.json') {
     URL.revokeObjectURL(url);
 }
 
-function toastError(message){
+
+function toastError(message) {
     alert(message)
 }
 
-function getBlocksNamespaces(){
+function getBlocksNamespaces() {
     // if(!blocksNamespace){
     //     fetch('./data.json')
     //         .then(response => {

@@ -10,7 +10,7 @@ function downloadBlocksListOnClick() {
         }
     }
 
-    downloadJsonMapAsObject(list)
+    downloadYamlMapAsObject(list)
 }
 
 function uploadFile(file) {
