@@ -1901,6 +1901,7 @@ var blocksNamespace = {
     'minecraft:polished_andesite': createBlockId(1, 6),
 
     'minecraft:stone_brick_wall[east=false,north=false,south=false,up=true,waterlogged=false,west=false]': 1 << 4,
+    'minecraft:nether_brick_wall[east=false,north=false,south=false,up=true,waterlogged=false,west=false]': 113 << 4,
 
     'minecraft:bone_block[axis=y]': createBlockId(216, 0),
     'minecraft:bone_block[axis=x]': createBlockId(216, 4),
