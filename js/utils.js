@@ -36,7 +36,7 @@ var blocksNamespace = {
     'minecraft:polished_granite_slab[type=double,waterlogged=false]': 12562,
     'minecraft:polished_granite_slab[type=bottom,waterlogged=false]': 15809,
     'minecraft:polished_granite_slab[type=top,waterlogged=false]': 15817,
-    'minecraft:diorite': 12563,
+    'minecraft:diorite': createBlockId(1, 3),
     'minecraft:diorite_wall[east=false,north=false,south=false,up=true,waterlogged=false,west=false]': 15761,
     'minecraft:diorite_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]': 16016,
     'minecraft:diorite_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]': 16017,
