@@ -102,6 +102,10 @@ function convertToLegacyBlockId(namespaceKey) {
         namespaceKey = 'minecraft:skeleton_skull' + namespaceKey.substr(namespaceKey.indexOf('[', index));
     }
 
+    if (~(index = namespaceKey.indexOf('in_wall=true'))) {
+        namespaceKey = namespaceKey.substr(0, index) + 'in_wall=false' + namespaceKey.substr(namespaceKey.indexOf(',', index));
+    }
+
     if (~(index = namespaceKey.indexOf('east='))) {
         namespaceKey = namespaceKey.substr(0, index) + 'east=false' + namespaceKey.substr(namespaceKey.indexOf(',', index));
     }
