@@ -142,6 +142,8 @@ function convertBlockDataV3(root) {
 
         root.value.Blocks = {type: 'byteArray', value: blocks};
         root.value.Data = {type: 'byteArray', value: data};
+        if (addBlocks)
+            root.value.AddBlocks = {type: 'byteArray', value: addBlocks};
         // root.value.AddBlocks = {type: 'byteArray', value: (addBlocks) ? addBlocks : []};
         // root.value.Palette = {type: 'compound', value: palette};
         // root.value.Palette = root?.value?.Schematic?.value.Blocks.value.Palette
