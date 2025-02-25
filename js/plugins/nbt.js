@@ -363,10 +363,12 @@
         this[nbt.tagTypes.compound] = function (value) {
             var self = this;
             Object.keys(value).map(function (key) {
-                self.byte(nbt.tagTypes[value[key].type]);
-                self.string(key);
-                if (DEBUG) console.log(value[key])
-                self[value[key].type](value[key].value);
+		if (value[key] !== undefined && value[key].type in nbt.tagTypes) {
+	                self.byte(nbt.tagTypes[value[key].type]);
+	                self.string(key);
+	                if (DEBUG) console.log(value[key])
+	                self[value[key].type](value[key].value);
+		}
             });
             this.byte(nbt.tagTypes.end);
             return this;
